@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">NavApp</string>
+    <string name="next">Next</string>
+    <string name="finish">Finish</string>
+
+    <!-- User Info screen -->
+    <string name="name">Name:</string>
+    <string name="username">Username:</string>
+    <string name="password">Password:</string>
+    <string name="confirm">Confirm:</string>
+
+    <!-- Subscribe Screen -->
+    <string name="subscribe">Subscribe</string>
+    <string name="newsletter">Newsletter</string>
+    <string name="campaigns">Campaigns</string>
+    <string name="surveys">Surveys</string>
+    <string name="accept_terms">Accept terms and conditions</string>
+
+    <!-- Contact Screen -->
+    <string name="email">Email:</string>
+    <string name="phone">Phone:</string>
+    <string name="web">Web:</string>
+
+    <!-- Welcome Screen -->
+    <string name="welcome">Welcome, &lt; %1$s &gt;!</string>
+
+
+    <!-- Dialog -->
+    <string name="accept_dialog_message">Please accept terms and conditions first</string>
+    <string name="ok">OK</string>
+
+    <!-- Errors -->
+    <string name="editText_error">This is a mandatory field!</string>
+    <string name="password_error">Passwords must match!</string>
+</resources>

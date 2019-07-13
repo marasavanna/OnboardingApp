@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable name="viewModel" type="com.marasavan.navapp.feature.onboarding.viewModel.ContactViewModel"/>
+    </data>
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <TextView
+                android:id="@+id/email_label"
+                android:text="@string/email"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="@dimen/size_larger"
+                app:layout_constraintTop_toTopOf="@+id/email" app:layout_constraintBottom_toBottomOf="@+id/email"/>
+
+        <EditText
+                android:id="@+id/email"
+                android:inputType="textEmailAddress"
+                tools:text="maraasavan@gmail.com"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/email_label" android:layout_marginStart="@dimen/size_small"
+                android:labelFor="@id/email_label"
+                android:text="@={viewModel.email}"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="@dimen/size_larger" tools:ignore="Autofill,LabelFor" android:layout_marginTop="@dimen/size_extra_large"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+                android:id="@+id/phone_label"
+                android:text="@string/phone"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="@dimen/size_larger" app:layout_constraintTop_toTopOf="@+id/phone"
+                app:layout_constraintBottom_toBottomOf="@+id/phone"/>
+
+        <EditText
+                android:id="@+id/phone"
+                tools:text="0740584425"
+                android:inputType="phone"
+                android:text="@={viewModel.phone}"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/phone_label" android:layout_marginStart="@dimen/size_small"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="@dimen/size_larger"
+                tools:ignore="Autofill,LabelFor" android:layout_marginTop="@dimen/size_normal"
+                app:layout_constraintTop_toBottomOf="@+id/email"/>
+
+        <TextView
+                android:id="@+id/web_label"
+                android:text="@string/web"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="@dimen/size_larger"
+                app:layout_constraintTop_toTopOf="@+id/web"
+                app:layout_constraintBottom_toBottomOf="@+id/web"/>
+
+        <EditText
+                android:id="@+id/web"
+                android:inputType="textMultiLine"
+                tools:text="https://drive.google.com/file/d/1Akn3xtjWiIBe67h-X2Y4algeIsBGosV9/view"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/size_larger"
+                android:text="@={viewModel.web}"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@+id/web_label"
+                android:layout_marginStart="@dimen/size_small" android:layout_marginTop="@dimen/size_normal"
+                app:layout_constraintTop_toBottomOf="@+id/phone" tools:ignore="Autofill,LabelFor"/>
+    </android.support.constraint.ConstraintLayout>
+</layout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+>
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <TextView
+                android:id="@+id/subscribe_label"
+                android:text="@string/subscribe"
+                android:textAllCaps="true"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="@dimen/size_larger"
+                android:layout_marginTop="@dimen/size_extra_large" app:layout_constraintTop_toTopOf="parent"/>
+
+        <RadioGroup
+                android:id="@+id/subscription_choices"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" app:layout_constraintTop_toBottomOf="@+id/subscribe_label"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="@dimen/size_larger"
+                android:layout_marginTop="@dimen/size_large">
+            <RadioButton
+                    android:id="@+id/newsletter"
+                    android:layout_width="wrap_content"
+                    android:text="@string/newsletter"
+                    android:layout_height="wrap_content"/>
+            <RadioButton
+                    android:id="@+id/campaigns"
+                    android:text="@string/campaigns"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            <RadioButton
+                    android:id="@+id/surveys"
+                    android:text="@string/surveys"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+        </RadioGroup>
+
+        <CheckBox
+                android:id="@+id/accept"
+                android:text="@string/accept_terms"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="@dimen/size_larger" android:layout_marginTop="@dimen/size_large"
+                app:layout_constraintTop_toBottomOf="@+id/subscription_choices"/>
+    </android.support.constraint.ConstraintLayout>
+
+</layout>
